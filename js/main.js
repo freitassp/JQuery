@@ -5,5 +5,15 @@ var numPalavras = frase.split(" ").length -1;
 var tamanhoFrase = $("#tamanho-frase");
 tamanhoFrase.text(numPalavras);
 
-console.log(tamanhoFrase);
+
+var campo = $(".campo-digitacao");
+campo.on("input", function(){
+  var conteudo = campo.val();
+
+
+  var qtdPalavras = conteudo.split(/\s+/ ).length -1;
+
+  var qtdCaracteres = conteudo.length;
+  $("#contador-caracteres").text(qtdCaracteres);
+});
 
