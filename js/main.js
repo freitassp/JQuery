@@ -12,6 +12,7 @@ campo.on("input", function(){
 
 
   var qtdPalavras = conteudo.split(/\s+/ ).length -1;
+  $("#contador-palavras").text(qtdPalavras);
 
   var qtdCaracteres = conteudo.length;
   $("#contador-caracteres").text(qtdCaracteres);
